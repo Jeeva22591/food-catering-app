@@ -18,7 +18,7 @@ import {
 } from "react-icons/fa";
 import "./App.css";
 
-const API_BASE = "";
+const API_BASE = "https://food-catering-app-production.up.railway.app";
 
 function App() {
   const discountPrice = (price) => Math.round(price * 0.7);
