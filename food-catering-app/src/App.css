@@ -1,0 +1,513 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fff8ee;
+  color: #222;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #250014, #650038);
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.logoIcon {
+  width: 58px;
+  height: 58px;
+  background: white;
+  color: #ff7a00;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+}
+
+.logo h2 {
+  color: #ffd166;
+}
+
+.logo p,
+.logo small {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.navLinks button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.callBox {
+  background: #ff512f;
+  padding: 13px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.hero {
+  min-height: 82vh;
+  padding: 70px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+  background: linear-gradient(120deg, #fff1dc, white);
+}
+
+.heroText h1 {
+  color: #650038;
+  font-size: 58px;
+  line-height: 1.1;
+}
+
+.heroText span {
+  color: #ff512f;
+}
+
+.heroText p {
+  font-size: 19px;
+  margin: 22px 0;
+  line-height: 1.6;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.features p {
+  background: white;
+  padding: 13px;
+  border-radius: 14px;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.primaryBtn,
+.outlineBtn,
+.fullBtn,
+.form button,
+.container button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 14px 28px;
+  border-radius: 30px;
+}
+
+.primaryBtn,
+.fullBtn,
+.form button,
+.container button {
+  background: linear-gradient(90deg, #ff512f, #f09819);
+  color: white;
+}
+
+.outlineBtn {
+  background: white;
+  color: #ff512f;
+  border: 2px solid #ff512f;
+  margin-left: 10px;
+}
+
+.heroImage {
+  position: relative;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.25);
+}
+
+.badge {
+  position: absolute;
+  right: -18px;
+  top: -18px;
+  background: #ffd166;
+  color: #650038;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: bold;
+}
+
+.section {
+  padding: 60px 7%;
+  text-align: center;
+}
+
+.section h2,
+.bookingForm h2,
+.summaryBox h2,
+.container h1 {
+  color: #650038;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.eventGrid,
+.weddingGrid,
+.foodImageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.eventCard,
+.weddingCard,
+.menuBox,
+.bookingForm,
+.summaryBox,
+.container {
+  background: white;
+  border-radius: 22px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.eventCard,
+.weddingCard {
+  padding: 26px;
+}
+
+.eventIcon {
+  color: #ff512f;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.foodImageGrid {
+  margin-bottom: 30px;
+}
+
+.foodBanner {
+  height: 260px;
+  border-radius: 25px;
+  display: flex;
+  align-items: end;
+  padding: 25px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.foodBanner h3 {
+  background: rgba(0,0,0,0.55);
+  padding: 12px 20px;
+  border-radius: 20px;
+}
+
+.vegBanner {
+  background-image: url("https://images.unsplash.com/photo-1540420773420-3366772f4999");
+}
+
+.nonVegBanner {
+  background-image: url("https://images.unsplash.com/photo-1562967916-eb82221dfb92");
+}
+
+.menuSection {
+  background: #fff1dc;
+}
+
+.menuLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: start;
+}
+
+.menuBox {
+  overflow: hidden;
+  max-height: 850px;
+  overflow-y: auto;
+}
+
+.menuBox h3 {
+  color: white;
+  padding: 18px;
+  font-size: 24px;
+  position: sticky;
+  top: 0;
+}
+
+.veg h3 {
+  background: #15803d;
+}
+
+.nonveg h3 {
+  background: #dc2626;
+}
+
+.menuItem {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  padding: 13px 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  align-items: center;
+}
+
+.menuItem span {
+  font-weight: 600;
+}
+
+.menuItem b {
+  color: #15803d;
+}
+
+.checkBoxMenu {
+  background: #ff7a00;
+  color: white;
+  padding: 7px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.checkBoxMenu input {
+  width: auto;
+  margin-right: 5px;
+}
+
+.menuActionBox,
+.selectedFoodBox {
+  margin-top: 25px;
+  background: white;
+  border: 2px dashed #ff7a00;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.selectedFoodBox {
+  text-align: left;
+}
+
+.weddingMenu {
+  background: #fff7ed;
+}
+
+.vegTitle {
+  color: #15803d;
+  margin: 20px 0;
+}
+
+.nonVegTitle {
+  color: #dc2626;
+  margin: 40px 0 20px;
+}
+
+.weddingCard {
+  text-align: left;
+}
+
+.weddingCard ul {
+  list-style: none;
+}
+
+.weddingCard li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.vegBorder {
+  border-left: 7px solid #22c55e;
+}
+
+.nonVegBorder {
+  border-left: 7px solid #dc2626;
+}
+
+.bookingSection {
+  padding: 60px 7%;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
+}
+
+.bookingForm,
+.summaryBox,
+.container {
+  padding: 30px;
+}
+
+form,
+.form {
+  display: grid;
+  gap: 14px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  padding: 0 12px;
+  border-radius: 12px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  outline: none;
+}
+
+.inputGroup input {
+  border: none;
+}
+
+textarea {
+  height: 95px;
+}
+
+.summaryBox p {
+  margin: 14px 0;
+  font-size: 18px;
+}
+
+.summaryBox h3 {
+  color: #15803d;
+  font-size: 28px;
+}
+
+.chef {
+  font-size: 80px;
+  text-align: center;
+}
+
+.container {
+  width: 92%;
+  margin: 40px auto;
+  overflow-x: auto;
+}
+
+.loginBox {
+  max-width: 600px;
+}
+
+.hint {
+  color: #650038;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.dashboardTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+th {
+  background: #650038;
+  color: white;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+footer {
+  background: #650038;
+  color: white;
+  padding: 45px 7%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+footer h2 {
+  color: #ffd166;
+}
+
+footer p {
+  margin-top: 10px;
+}
+
+.social {
+  display: flex;
+  gap: 15px;
+  font-size: 23px;
+  margin-top: 15px;
+}
+
+@media (max-width: 900px) {
+  .navbar,
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .hero,
+  .menuLayout,
+  .bookingSection {
+    grid-template-columns: 1fr;
+  }
+
+  .heroText h1 {
+    font-size: 36px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .menuItem {
+    grid-template-columns: 1fr;
+  }
+
+  .outlineBtn {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
