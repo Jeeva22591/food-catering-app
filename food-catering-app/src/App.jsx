@@ -564,4 +564,64 @@ function App() {
                   <th>ID</th>
                   <th>Client</th>
                   <th>Mobile</th>
-                  <th>Email
+                  <th>Email</th>
+                  <th>Function</th>
+                  <th>Date</th>
+                  <th>Guests</th>
+                  <th>Food</th>
+                  <th>Servers</th>
+                  <th>Total</th>
+                  <th>Address</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {bookings.map((b) => (
+                  <tr key={b.id}>
+                    <td>{b.id}</td>
+                    <td>{b.customerName}</td>
+                    <td>{b.mobile}</td>
+                    <td>{b.email}</td>
+                    <td>{b.eventType}</td>
+                    <td>{b.eventDate}</td>
+                    <td>{b.guests}</td>
+                    <td>{b.foodMenu}</td>
+                    <td>{b.servers}</td>
+                    <td>₹{b.totalAmount}</td>
+                    <td>{b.address}</td>
+                    <td>
+                      <button onClick={() => deleteBooking(b.id)}>Delete</button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </section>
+      )}
+
+      <footer>
+        <div>
+          <h2>Royal Feast</h2>
+          <p>Owner: SIVANESH</p>
+          <p>Making your special moments delicious.</p>
+          <div className="social">
+            <FaFacebookF />
+            <FaInstagram />
+            <FaWhatsapp />
+          </div>
+        </div>
+
+        <div>
+          <h3>Contact Us</h3>
+          <p><FaPhoneAlt /> +91 8072063173</p>
+          <p>📧 royalfeast@gmail.com</p>
+          <p><FaMapMarkerAlt /> Chennai, Tamil Nadu</p>
+        </div>
+      </footer>
+    </>
+  );
+}
+
+export default App;
