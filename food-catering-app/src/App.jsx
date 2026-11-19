@@ -18,7 +18,7 @@ import {
 } from "react-icons/fa";
 import "./App.css";
 
-const API_BASE = "https://food-catering-app-production.up.railway.app";
+const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 function App() {
   const discountPrice = (price) => Math.round(price * 0.7);
@@ -289,7 +289,7 @@ function App() {
             </h1>
 
             <p>
-              Premium catering by Jeevarathinam for weddings, birthdays,
+              Premium catering by SIVANESH for weddings, birthdays,
               receptions, baby showers, ear piercing functions and corporate events.
             </p>
 
@@ -564,64 +564,4 @@ function App() {
                   <th>ID</th>
                   <th>Client</th>
                   <th>Mobile</th>
-                  <th>Email</th>
-                  <th>Function</th>
-                  <th>Date</th>
-                  <th>Guests</th>
-                  <th>Food</th>
-                  <th>Servers</th>
-                  <th>Total</th>
-                  <th>Address</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {bookings.map((b) => (
-                  <tr key={b.id}>
-                    <td>{b.id}</td>
-                    <td>{b.customerName}</td>
-                    <td>{b.mobile}</td>
-                    <td>{b.email}</td>
-                    <td>{b.eventType}</td>
-                    <td>{b.eventDate}</td>
-                    <td>{b.guests}</td>
-                    <td>{b.foodMenu}</td>
-                    <td>{b.servers}</td>
-                    <td>₹{b.totalAmount}</td>
-                    <td>{b.address}</td>
-                    <td>
-                      <button onClick={() => deleteBooking(b.id)}>Delete</button>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
-        </section>
-      )}
-
-      <footer>
-        <div>
-          <h2>Royal Feast</h2>
-          <p>Owner: Jeevarathinam</p>
-          <p>Making your special moments delicious.</p>
-          <div className="social">
-            <FaFacebookF />
-            <FaInstagram />
-            <FaWhatsapp />
-          </div>
-        </div>
-
-        <div>
-          <h3>Contact Us</h3>
-          <p><FaPhoneAlt /> +91 8072063173</p>
-          <p>📧 royalfeast@gmail.com</p>
-          <p><FaMapMarkerAlt /> Chennai, Tamil Nadu</p>
-        </div>
-      </footer>
-    </>
-  );
-}
-
-export default App;
+                  <th>Email
